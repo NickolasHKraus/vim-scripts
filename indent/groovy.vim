@@ -51,7 +51,7 @@ function GetGroovyIndent()
 
   " Groovy is just like C; use the built-in C indenting and then correct a few
   " specific cases.
-  let theIndent = cindent(v:lnum)
+  let theIndent = cindent(v:lnum) + 2
 
   " If we're in the middle of a comment then just trust cindent
   if getline(v:lnum) =~ '^\s*\*'
